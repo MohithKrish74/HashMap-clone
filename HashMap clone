@@ -1,0 +1,35 @@
+package com.company;
+
+import com.sun.jdi.Value;
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner in =new Scanner(System.in);
+        HashMap<Integer,String>map1=new HashMap<Integer,String>();
+        System.out.print("Enter the size of the map 1: ");
+        int size=in.nextInt();
+        System.out.println("Enter the Key and Value ");
+        for(int i=0;i<size;i++)
+        {
+            map1.put(in.nextInt(), in.nextLine());
+        }
+        System.out.println("The Key Value pair is "+map1);
+        HashMap<Integer,String> map2=new HashMap<Integer,String>();
+        map2=(HashMap)map1.clone();
+        System.out.println("The HashMap after cloning is "+map2);
+
+
+    }
+
+}
+
+
+
+
+
+
+
